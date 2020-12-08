@@ -33,15 +33,15 @@
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<application android:label="JaFaFa" android:icon="@drawable/JaFaFa_icon" android:usesCleartextTraffic="true" android:theme="@style/MainTheme" android:hardwareAccelerated="true" android:allowBackup="true" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config">
 		<!-- Put your Google Maps V2 API Key here. -->
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC8r2yoGgwq9gF3DtRBgkCB5tIeb1aoafs" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="enter your key here" />
 		<!--meta-data android:name="com.google.android.geo.API_KEY"
-					  android:value="AIzaSyC8r2yoGgwq9gF3DtRBgkCB5tIeb1aoafs" /-->
+					  android:value="enter your key here" /-->
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<!-- Necessary for apps that target Android 9.0 or higher -->
 		<!--uses-library android:name="org.apache.http.legacy" android:required="false" /-->
-		<meta-data android:name="com.here.android.maps.appid" android:value="usZhiwSi0H5XmUUr673w" />
-		<meta-data android:name="com.here.android.maps.apptoken" android:value="3FsgflJ3252o_SZsa-DXNQ" />
-		<meta-data android:name="com.here.android.maps.license.key" android:value="X6bTpIOJGf7JtQ6DCa71W3DKniQM4csFXso3Bs4x1YngKjsHZd37tpcCG+MuMfemEDrcBCCwiatbOf/huOPFGChYXS+SKmZ7Gzjicj2vFZG47yOvAxA9eJ7+jgyrJvlkzcrNQqIpRKQFaZSf4kLN3BdXOCjyiu8mB7oSL25B0R3PDWa6awV75QT8brT+DDE97OiEtKgOuH+BI01VROxzhGS8M7bEPz4owYaAnxdoBVziF+pCJXRjGV3l8z2jdmUQiMiXbvAiUdF51vH9aG9xw9gkacPTRBhDReUyjRX5HTg96lzYpI/9sTCpt+y93Da0fknoJ6x4N0IQNF6NSIx2gxbgaBQBadKdo+FJOvqzAKQ1xokBuDe+9D3ipacwG/Yw1yUSCot4GIEBtfgu5Gp4PkKMI2Vc0x8/m0RPA3JeAkHlUQPtlnNDl5vPz3eyr3Sc7ATycbaFtq6sgp9zfum8Ztav99HQvAPmqd2XdjIyWYqAKS0HwRP4ZupMd5If11VV7NG9/kPFzFUfbkyavY+XyfssdHYmXoDAtbIhSv4HiDs/Jvu6JGS2PvCMaJqvq/1pEzHouH0fn8zd/HUXoXxjlAJLa1ZHFa74noOJfrUAI9fqWSub2mGdYHI4ojyX8VYdnGnV8SRP/uE4f5iHEWAb6AR0GK7A2C4iTyTPrTtElDk=" />
+		<meta-data android:name="com.here.android.maps.appid" android:value="enter your appID here" />
+		<meta-data android:name="com.here.android.maps.apptoken" android:value="enter your appToken here" />
+		<meta-data android:name="com.here.android.maps.license.key" android:value="enter your key here" />
 		<!--service android:name="com.nokia.maps.MapServiceInternal" android:exported="false"/-->
 		<!-- HERE Map Service definition. -->
 		<service android:name="com.here.android.mpa.service.MapService"

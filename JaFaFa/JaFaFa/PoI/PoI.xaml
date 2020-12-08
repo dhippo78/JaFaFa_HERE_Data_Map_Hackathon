@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"             
+             x:Class="JaFaFa.PoI.PoI"
+             Title="PoI"
+             Appearing="ContentPage_Appearing"
+             Disappearing="ContentPage_Disappearing">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" BackgroundColor="#48649F">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackLayout Grid.Row="0" Margin="12,17,0,28">
+            <Label Text="JaFaFa" Margin="9,-7,0,0" FontSize="53"/>
+            <Label Text="Point of Interest" Margin="9,-7,0,0" FontSize="53"/>
+        </StackLayout>
+        <!--ContentPanel - LongListSelector-->
+        <StackLayout Grid.Row="1" Margin="0,0,0,0">
+            <ListView x:Name="PoILLS"
+                      Grid.Row="1"
+                      IsGroupingEnabled="False"
+                      BackgroundColor="Transparent"
+                      ItemTapped="OnItemTapped"
+                      ItemSelected="PoISelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding PoIName}"
+                                   Detail="{Binding PoIAddress}"
+                                   ImageSource="{Binding PoIImg}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

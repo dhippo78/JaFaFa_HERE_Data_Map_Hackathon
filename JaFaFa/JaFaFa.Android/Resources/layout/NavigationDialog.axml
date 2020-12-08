@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="top">
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/tile_jafafa1_691x336"
+            android:layout_height="336px"
+            android:contentDescription=""/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Navigation_DialogBox_Text1" />
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Navigation_DialogBox_Table">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:contentDescription=""
+                        android:layout_height="100px"
+                        android:layout_width="100px"
+                        android:id="@+id/fromCurrentLocationImageView"
+                        android:background="@drawable/appbar_track_me_light" />
+                    <AutoCompleteTextView
+                        android:id="@+id/fromText"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/Navigation_DialogBox_From_Text"/>                    
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:contentDescription=""
+                        android:layout_height="100px"
+                        android:layout_width="100px"
+                        android:id="@+id/throughCurrentLocationImageView"
+                        android:background="@drawable/appbar_track_me_light" />
+                    <AutoCompleteTextView
+                        android:id="@+id/throughText"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/Navigation_DialogBox_Through_Text" />                    
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:contentDescription=""
+                        android:layout_height="100px"
+                        android:layout_width="100px"
+                        android:id="@+id/destinationCurrentLocationImageView"
+                        android:background="@drawable/appbar_track_me_light" />
+                    <AutoCompleteTextView
+                        android:id="@+id/destinationText"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/Navigation_DialogBox_Destination_Text" />                    
+                </TableRow>
+        </TableLayout>
+    </LinearLayout>

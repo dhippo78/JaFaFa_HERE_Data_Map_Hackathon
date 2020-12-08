@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GeoJSON\lagos-administrativedivisions-v87_OEzqkirR.geojson" />
+    <None Remove="GeoJSON\lagos-buildings-v89_XGR33Hed.geojson" />
+    <None Remove="GeoJSON\lagos-destinationsigns-v89_fYVKJBnO.geojson" />
+    <None Remove="GeoJSON\lagos-landcover-v87_VDWH5KdX.geojson" />
+    <None Remove="GeoJSON\lagos-landuse-v87_QTw6hZLM.geojson" />
+    <None Remove="GeoJSON\lagos-navigableroads-v89_IaZSwXjk.geojson" />
+    <None Remove="GeoJSON\lagos-places-v90_emWo9u7W.geojson" />
+    <None Remove="GeoJSON\lagos-trafficrestrictions-v89_dxCxmVoh.geojson" />
+    <None Remove="PoI\Combined_POI_Database_20140822.xml" />
+    <None Remove="PoI\PoIDB.xml" />
+    <None Remove="PoI\PoIDBGas.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.7.0.968" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="GeoJSON\lagos-administrativedivisions-v87_OEzqkirR.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-buildings-v89_XGR33Hed.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-destinationsigns-v89_fYVKJBnO.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-landcover-v87_VDWH5KdX.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-landuse-v87_QTw6hZLM.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-navigableroads-v89_IaZSwXjk.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-places-v90_emWo9u7W.geojson" />
+    <EmbeddedResource Include="GeoJSON\lagos-trafficrestrictions-v89_dxCxmVoh.geojson" />
+    <EmbeddedResource Include="PoI\Combined_POI_Database_20140822.xml" />
+    <EmbeddedResource Include="PoI\PoIDB.xml" />
+    <EmbeddedResource Include="PoI\PoIDBGas.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PoI\PoI.xaml.cs">
+      <DependentUpon>PoI.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PopupPage.xaml.cs">
+      <DependentUpon>PopupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LeftSideMasterView.xaml.cs">
+      <DependentUpon>LeftSideMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RightSideMasterView.xaml.cs">
+      <DependentUpon>RightSideMasterView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Magneto\CompassController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PoI\PoI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalibrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LeftSideMasterView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

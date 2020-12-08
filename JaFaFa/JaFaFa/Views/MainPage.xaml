@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:jmap="clr-namespace:JaFaFa.JaFaFaMAP"
+             xmlns:views="clr-namespace:JaFaFa.Views"             
+             x:Class="JaFaFa.Views.MainPage"
+             Title="JáFáFá"
+             x:Name="JáFáFáMainPage">
+
+    <ContentPage.ToolbarItems x:Uid="ToolBar_MainPage">
+        <ToolbarItem IconImageSource="Settings.png"
+                     Text="Settings" Clicked="ToolBar_MainPage_Clicked"
+                     Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <StackLayout>
+            <Image Source="Tile_JaFaFa1_691x336.png" HeightRequest="50" BackgroundColor="LemonChiffon">
+                <Image.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <AbsoluteLayout x:Name="AbsoluteLayout_Map" VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                <jmap:jMAP x:Name="JaFaFaMap" MapType="Street" AbsoluteLayout.LayoutFlags="All"
+                       IsShowingUser="True" MoveToLastRegionOnLayoutChange="True"
+                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+                <StackLayout AbsoluteLayout.LayoutFlags="All"
+                       AbsoluteLayout.LayoutBounds="0, 1, 0.3, 0.3" Spacing="-5">
+                    <Button Text="Street" Opacity="0.5"
+                    Clicked="OnButtonClicked" />
+                    <Button Text="Satellite" Opacity="0.5"
+                    Clicked="OnButtonClicked" />
+                    <Button Text="Hybrid" Opacity="0.5"
+                    Clicked="OnButtonClicked" />
+                </StackLayout>
+                <views:RightSideMasterView x:Name="RightSideMasterView_Name" AbsoluteLayout.LayoutFlags="All"
+                      AbsoluteLayout.LayoutBounds="1, 0, 0.9, 0.75" IsVisible="False"/>
+                <views:LeftSideMasterView x:Name="LeftSideMasterView_Name" AbsoluteLayout.LayoutFlags="All"
+                      AbsoluteLayout.LayoutBounds="0, 0, 0.9, 0.95" IsVisible="False"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

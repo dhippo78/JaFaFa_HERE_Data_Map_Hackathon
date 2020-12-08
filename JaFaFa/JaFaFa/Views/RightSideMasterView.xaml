@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:SlideMenuView xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:t="clr-namespace:SlideOverKit"
+                 x:Class="JaFaFa.Views.RightSideMasterView">
+    <Grid Padding="10, 10, 10, 10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.ColumnSpan="3" Text="Settings" FontSize="18" XAlign="Center" YAlign="Center"
+               TextColor="Black" x:Name="Settings_Menu_Label" BackgroundColor="Gold"/>
+
+        <Grid Grid.Column="0" Grid.Row="1" x:Name="Location_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Location_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0">
+                <Image Source="Report_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Location_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" x:Name="Online_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Online_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0">
+                <Image Source="MoneyBag_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Online_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="1" x:Name="Compass_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Compass_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0">
+                <Image Source="Timeline_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Compass_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="2" x:Name="Traffic_Legend_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Traffic_Legend_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,10,0,0">
+                <Image Source="Chat_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Traffic_Legend_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2" x:Name="Cartographic_Mode_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Cartographic_Mode_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,10,0,0">
+                <Image Source="USBConnected_Color.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Cartographic_Mode_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="2" x:Name="Journey_Stats_Grid" BackgroundColor="White">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Journey_Stats_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,10,0,0">
+                <Image Source="Battery_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label XAlign="Center" WidthRequest="100" HeightRequest="50"
+                       x:Name="Journey_Stats_Grid_Label"/>
+            </StackLayout>
+        </Grid>
+    </Grid>    
+</t:SlideMenuView>

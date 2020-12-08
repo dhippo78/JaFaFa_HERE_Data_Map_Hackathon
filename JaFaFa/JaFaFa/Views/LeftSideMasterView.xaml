@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<t:SlideMenuView xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:t="clr-namespace:SlideOverKit"
+                 x:Class="JaFaFa.Views.LeftSideMasterView">
+    <Grid Padding="10, 10, 10, 10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label Text="Help and Support" FontSize="18" Grid.ColumnSpan="2" XAlign="Center"
+               YAlign="Center" TextColor="Black" BackgroundColor="Gold" />
+        
+        <Grid Grid.Column="0" Grid.Row="1" BackgroundColor="#E15771">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Compass_Calibration_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="Home.png" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Compass Calibration" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" BackgroundColor="#348ECA">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Terms_and_Conditions_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="Happy.png" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Terms and Conditions" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="2" BackgroundColor="#348ECA">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped = "Credits_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="Settings.png" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Credits" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2" BackgroundColor="#E15771">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Feedback_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="Chat_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Feedback" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="3" BackgroundColor="#E15771">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="About_Grid_Clicked"
+                                      NumberOfTapsRequired="1"  />
+            </Grid.GestureRecognizers>
+            <StackLayout Padding="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="About_Blue.png" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="About" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</t:SlideMenuView>

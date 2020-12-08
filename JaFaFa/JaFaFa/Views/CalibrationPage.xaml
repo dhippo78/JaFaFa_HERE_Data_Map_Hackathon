@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="JaFaFa.Views.CalibrationPage" Title="Compass Calibration"
+             Appearing="ContentPage_Appearing" Disappearing="ContentPage_Disappearing">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>            
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Calibration UI-->
+        <StackLayout x:Name="calibrationStackPanel" Grid.Row="0"
+                     Opacity="1" IsVisible="True">
+            <Image Source="calibration_hint.png"
+                   Opacity=".95"
+                   Margin="0,0,0,0"
+                   HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal"
+                        Margin="0,30,0,0"
+                        HorizontalOptions="Center">
+                <Label>Heading accuracy:</Label>
+                <Label WidthRequest="100" x:Name="calibrationTextBlock"/>
+            </StackLayout>
+            <Label Margin="0,0,0,0"
+                   HorizontalTextAlignment="Center" x:Name="calibrationStatus" HeightRequest="50"/>
+            <!--Button x:Name="calibrationButton"
+                    Text="Calibrate"
+                    IsEnabled="True"
+                    Margin="20,10,20,10"
+                    Clicked="calibrationButton_OnClick"/-->
+        </StackLayout>
+        <!--End Calibration UI-->
+    </Grid>
+</ContentPage>
